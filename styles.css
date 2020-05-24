@@ -57,26 +57,7 @@ body {
   background: red;
   grid-area: footer;
 }
-/* @media (max-width:500px) {
-  .footer{
-    background: green;
-  }
-} */
 
-/* @media (max-width:400px) {
-  .container {
-    height: 1000px;
-    background-color: red;
-    margin:50px;
-  }
-}
-@media (min-width:400px) {
-  .container {
-    height:500px;
-    background-color: green;
-    margin:50px;
-  }
-} */
 
 
 @media (max-width: 576px){
@@ -105,7 +86,7 @@ body {
 
 }
 
-/* @media (min-width: 576px){
+@media (min-width: 576px){
   .container {
     display: grid;
     height: 100vh;
@@ -124,8 +105,8 @@ body {
     "footer footer footer";
   }
 
-} */
-/* @media (min-width: 920px){
+}
+@media (min-width: 920px){
   .container {
     display: grid;
     height: 100vh;
@@ -140,4 +121,4 @@ body {
     "footer footer footer footer footer footer footer footer footer footer footer footer";
   }
 
-} */
+}
