@@ -1,76 +1,128 @@
 body {
-  background-color: lightGrey;
-  font-family: fantasy;
+  background-color: #fcf8e8;
+  font-family: Alegreya regular;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p {
+  text-align: center;
+  font-size: 0,5rem;
+}
+a {
+  color: #7c3c21;
+}
+a:hover {
+  color: #DC143C;
+}
+.navbar {
+  width:100%;
+  font-weight: bold;
+}
+.savepic {
+  width:30%;
+  height:100%;
+  object-fit:fill;
+  float:left;
+  margin-right: 10px;
+}
+.img1 {
+  object-fit:scale-down;
+}
+.btn1  {
+  margin: auto;
+  display:block;
+  margin-top: 25px;
+}
+.btn1:hover {
+  color: black;
+}
+.iframe {
+  margin: auto;
+  width:80%;
+  display: block;
 }
 .container {
   width:auto;
   height:auto;
-
 }
-
 .brand {
-  background: lightSalmon;
+  background: #fcf8e8;
   grid-area: brand;
-}
-
+  font-weight: bold;
+  padding-top: 10px;
+ }
 .glonav {
-  background: lightSalmon;
+  background: #ecb390;
   grid-area: glonav;
 }
-
 .tools {
-  background: lightSalmon;
+  background: #fcf8e8;
   grid-area: tools;
 }
-
 .herofeat {
-  background: lightSalmon;
+  padding-right: 10px;
+  font-style:italic;
+  line-height: 90%;
+  background:#fcf8e8;
   grid-area: herofeat;
+  overflow: auto;
 }
-
 .herocall {
-  background: lightSalmon;
+  background: #df7861;
   grid-area: herocall;
+  padding: 10px;
 }
-
 .artfeat {
-  background: lightSalmon;
+  background: #ecb390;
   grid-area: artfeat;
+  padding: 20px;
+  text-align: center;
+  height: auto;
 }
-
 .artlist {
-  background: lightSalmon;
+  border-style: groove;
+  background: #fcf8e8;
   grid-area: artlist;
+  padding: 50px;
+  font-style: italic;
 }
-
 .ad {
-  background: lightSalmon;
+  background: #fcf8e8;
   grid-area: ad;
 }
-
 .sidebar {
-  background: lightSalmon;
+  background: #ecdfc8;
   grid-area: sidebar;
+  padding-left: 30px;
+  padding-top: 30px;
 }
-
 .footer {
-  background: red;
+  background: #df7861;
   grid-area: footer;
+  display:inline;
+  padding-top: 10px;
+  line-height: normal;
 }
-
-
+.footer1 {
+  text-align: center;
+}
+.footer2 {
+  text-align: center;
+}
 
 @media (max-width: 576px){
   .container {
     display: grid;
     height: 500px;
     width: 100%;
-    grid-gap: 20px;
+    grid-gap: 5px;
     grid-template-columns: 60% 40%;
-    grid-template-rows: 0.8fr 0.8fr 1fr 1fr auto 0.8fr;
+    grid-template-rows: 0.8fr 0.8fr 0.8fr 1fr 1fr auto 0.8fr;
     grid-template-areas:
     "brand brand"
     "glonav tools"
+    "herocall herocall"
     "artfeat artfeat"
     "ad ad"
     "artlist artlist"
@@ -79,19 +131,16 @@ body {
   .herofeat {
     display: none;
   }
-
   .sidebar {
     display: none;
   }
-
 }
-
 @media (min-width: 577px) and (max-width:919px){
   .container {
     display: grid;
     height: 100vh;
     width: 100%;
-    grid-gap: 10px;
+    grid-gap: 5px;
     grid-template-columns: 25% auto 25%;
     grid-template-rows: 0.8fr 0.8fr 0.8fr 1.5fr 1fr auto 0.8fr;
     grid-template-areas:
@@ -103,21 +152,20 @@ body {
     "sidebar sidebar sidebar"
     "footer footer footer";
   }
-
 }
 @media (min-width: 920px){
   .container {
     display: grid;
     height: 100vh;
     width: 100%;
-    grid-gap: 20px;
+    grid-gap: 10px;
     grid-template-columns: repeat (12, 1fr);
-    grid-template-rows: 10% 20% auto 10%;
+    /* grid-template-rows: 10% 20% auto 10%; */
+    grid-template-rows: 1fr 2fr 4fr 1fr;
     grid-template-areas:
     "brand brand glonav glonav glonav glonav glonav glonav glonav tools tools tools"
     "herofeat herofeat herofeat herofeat herofeat herofeat herocall herocall herocall ad ad ad"
     "artfeat artfeat artfeat artlist artlist artlist artlist artlist artlist sidebar sidebar sidebar"
     "footer footer footer footer footer footer footer footer footer footer footer footer";
   }
-
 }
